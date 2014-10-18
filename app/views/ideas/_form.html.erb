@@ -23,7 +23,14 @@
     <%= f.label :picture %><br>
     <%= f.file_field :picture %>
   </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= range_field :idea, :rating, :in =>0..5, :step => 1 %>
+      <span id="rangenb"><%= @idea.rating %>
+      </span>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
